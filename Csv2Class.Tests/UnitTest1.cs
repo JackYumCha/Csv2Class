@@ -12,10 +12,8 @@ namespace Csv2Class.Tests
         [InlineData(@"file to convert")]
         public void ConvertCsvFile(string filename)
         {
-
             Func<Stream> fac = () => File.OpenRead(filename);
             var code = fac.ToClass(true, "DimStoreEtl");
-
             Debugger.Break();
         }
     }
